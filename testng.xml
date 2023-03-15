@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="2">
+    <test name="firefox-test">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="url" value="https://www.ebay.com/"/>
+        <classes>
+            <class name="com.ict.qa.Base"/>
+            <class name="com.ict.qa.SelectMobileTest">
+                <methods>
+                    <include name="getUrl"/>
+                    <include name="validateUrl"/>
+                    <include name="selectCategory"/>
+                    <include name="searchMobile"/>
+                    <include name="selectApple"/>
+                    <include name="selectFirstItem"/>
+                </methods>
+            </class>
+
+            <class name="com.ict.qa.PurchaseMobileTest">
+                <methods>
+                    <include name="selectNewWindow"/>
+                    <include name="selectModel"/>
+                    <include name="selectCarrier"/>
+                    <include name="selectStorageCapacity"/>
+                    <include name="selectColor"/>
+                    <include name="selectCosmetic"/>
+                    <include name="getItemName"/>
+                    <include name="getItemPrice"/>
+                    <include name="getItemCondition"/>
+                    <include name="getItemQuantity"/>
+                    <include name="addItemToCart"/>
+                    <include name="checkItemName"/>
+                    <include name="checkItemPrice"/>
+                    <include name="checkQuantity"/>
+                    <include name="getShippingValue"/>
+                    <include name="getP"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+<!--    <test name="chrome-test">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <parameter name="url" value="https://www.ebay.com/"/>-->
+<!--        <classes>-->
+<!--            <class name="com.ict.qa.Base"/>-->
+<!--            <class name="com.ict.qa.SelectMobileTest">-->
+<!--                <methods>-->
+<!--                    <include name="getUrl"/>-->
+<!--                    <include name="validateUrl"/>-->
+<!--                    <include name="selectCategory"/>-->
+<!--                    <include name="searchMobile"/>-->
+<!--                    <include name="selectApple"/>-->
+<!--                    <include name="selectFirstItem"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+
+<!--            <class name="com.ict.qa.PurchaseMobileTest">-->
+<!--                <methods>-->
+<!--                    <include name="selectNewWindow"/>-->
+<!--                    <include name="selectModel"/>-->
+<!--                    <include name="selectCarrier"/>-->
+<!--                    <include name="selectStorageCapacity"/>-->
+<!--                    <include name="selectColor"/>-->
+<!--                    <include name="selectCosmetic"/>-->
+<!--                    <include name="getItemName"/>-->
+<!--                    <include name="getItemPrice"/>-->
+<!--                    <include name="getItemCondition"/>-->
+<!--                    <include name="getItemQuantity"/>-->
+<!--                    <include name="addItemToCart"/>-->
+<!--                    <include name="checkItemName"/>-->
+<!--                    <include name="checkItemPrice"/>-->
+<!--                    <include name="checkQuantity"/>-->
+<!--                    <include name="getShippingValue"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>
